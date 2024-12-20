@@ -17,21 +17,15 @@ int main() {
         sinhVien[i].name[strcspn(sinhVien[i].name, "\n")] = 0;
 
         printf("Nhap tuoi cua sinh vien: ");
-        scanf("%d", &sinhVien[i].age);  // Nhập tuổi sinh viên
-
-        // Xóa ký tự dư thừa trong bộ đệm sau khi sử dụng scanf
+        scanf("%d", &sinhVien[i].age);  
         getchar();
 
         printf("Nhap so dien thoai cua sinh vien: ");
-        fgets(sinhVien[i].phoneNumber, sizeof(sinhVien[i].phoneNumber), stdin);  // Nhập số điện thoại
-
-        // Xóa ký tự dư thừa trong bộ đệm sau khi sử dụng fgets
+        fgets(sinhVien[i].phoneNumber, sizeof(sinhVien[i].phoneNumber), stdin);  
         sinhVien[i].phoneNumber[strcspn(sinhVien[i].phoneNumber, "\n")] = 0;
 
         printf("\n");
     }
-
-    // In thông tin các sinh viên ra màn hình
     printf("\nThong tin cac sinh vien la:\n");
     for (int i = 0; i < 5; i++) {
         printf("Sinh vien %d:\n", i + 1);
@@ -43,5 +37,7 @@ int main() {
 
     return 0;
 }
+
+
 
 
